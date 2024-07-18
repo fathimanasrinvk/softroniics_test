@@ -43,10 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.only(left: 350,top: 50),
             child: InkWell(
-              onTap: (){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) => CartPage()));
-              },
+                onTap: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => CartPage()));
+                },
                 child: Icon(Icons.shopping_cart,color: ColorTheme.green,)),
           ),
           Image.asset("assets/images/icon_img.png", height: 120),

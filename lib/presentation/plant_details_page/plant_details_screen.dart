@@ -60,7 +60,7 @@ class PlantDetailPage extends StatelessWidget {
                         fontSize: 18,
                       ),
                     ),
-                    child: Text("Buy"),
+                    child: Text("             Buy             "),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -82,7 +82,7 @@ class PlantDetailPage extends StatelessWidget {
                         fontSize: 18,
                       ),
                     ),
-                    child: Text("Cart"),
+                    child: Text("             Cart             "),
                   ),
                 ],
               ),

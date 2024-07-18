@@ -10,7 +10,7 @@ class PlantGrid extends StatelessWidget {
   final List<String> plantNames;
   final List<String> plantDescriptions;
 
-    PlantGrid({
+  PlantGrid({
     required this.plants,
     required this.plantNames,
     required this.plantDescriptions,
