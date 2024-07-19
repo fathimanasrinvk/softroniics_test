@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:softroniics_test/presentation/bottom_navigation/controller/bottomnav_controller.dart';
 import 'package:softroniics_test/presentation/bottom_navigation/view/bottomnav_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:softroniics_test/presentation/login_page/view/login_page.dart';
 import 'presentation/cart_page/controller/cart_controller.dart';
 import 'presentation/registration_page/view/registration_screen.dart';
 import 'presentation/cart_page/view/cart_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       create: (context) => NavigationController(),
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainScreen(),
+        home: LoginPage(),
       ),
     );
   }

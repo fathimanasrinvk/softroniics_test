@@ -17,17 +17,20 @@ class CartPage extends StatelessWidget {
           itemCount: cartController.cartItems.length,
           itemBuilder: (context, index) {
             var item = cartController.cartItems[index];
-            return ListTile(
-              tileColor: ColorTheme.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)),
-              title: Text(item['name'],style: TextStyle(fontWeight: FontWeight.bold),),
-              leading: Image.asset(item['image']),
-              trailing: IconButton(
-                icon: Icon(Icons.delete,color: ColorTheme.maincolor,),
-                onPressed: () {
-                  cartController.removeFromCart(index);
-                },
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                tileColor: ColorTheme.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                title: Text(item['name'],style: TextStyle(fontWeight: FontWeight.bold),),
+                leading: Image.asset(item['image'],),
+                trailing: IconButton(
+                  icon: Icon(Icons.delete,color: ColorTheme.black,),
+                  onPressed: () {
+                    cartController.removeFromCart(index);
+                  },
+                ),
               ),
             );
           },

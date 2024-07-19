@@ -8,6 +8,7 @@ import 'package:softroniics_test/core/constants/colors.dart';
 import 'package:softroniics_test/core/constants/text_style.dart';
 import 'package:path_provider/path_provider.dart';
 import '../../HomePage/view/home_screen.dart';
+import '../../bottom_navigation/view/bottomnav_screen.dart';
 import '../../registration_page/view/registration_screen.dart';
 void main(){
   runApp(MaterialApp(debugShowCheckedModeBanner: false,home: LoginPage(),));
@@ -155,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  HomeScreen()));
+                                                  BottomNavPage()));
                                       namecontroller.text = "";
                                       pcontroller.text = "";
                                     } else {

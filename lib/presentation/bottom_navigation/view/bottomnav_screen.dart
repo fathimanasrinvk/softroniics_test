@@ -8,7 +8,7 @@ import 'package:softroniics_test/presentation/cart_page/view/cart_screen.dart';
 
 import '../controller/bottomnav_controller.dart';
 
-class MainScreen extends StatelessWidget {
+class BottomNavPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navigationController = Provider.of<NavigationController>(context);
