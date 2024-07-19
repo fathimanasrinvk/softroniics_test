@@ -34,9 +34,7 @@ dependencies:
   shared_preferences:
   path_provider:
   get:
-  hive:
   image_picker:
-  hive_flutter:
   provider:
 
 
@@ -47,7 +45,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  hive_generator:
   build_runner:
 
   # The "flutter_lints" package below contains a set of recommended lints to
