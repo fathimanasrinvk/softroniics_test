@@ -238,7 +238,6 @@ Future<String> _readName() async {
     String name = await file.readAsString();
     return name;
   } catch (e) {
-    // If encountering an error, return empty string
     return '';
   }
 }

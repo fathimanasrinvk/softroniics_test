@@ -1,12 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class NavigationController extends ChangeNotifier {
-  int _selectedIndex = 0;
-
-  int get selectedIndex => _selectedIndex;
+class NavigationController extends GetxController {
+  var selectedIndex = 0.obs;
 
   void onItemTapped(int index) {
-    _selectedIndex = index;
-    notifyListeners();
+    selectedIndex.value = index;
   }
 }

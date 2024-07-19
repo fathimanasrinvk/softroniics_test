@@ -4,7 +4,7 @@ import 'package:softroniics_test/core/constants/colors.dart';
 import '../controller/cart_controller.dart';
 
 class CartPage extends StatelessWidget {
-  final CartController cartController = Get.find(); // Accessing the cart controller
+  final CartController cartController = Get.put(CartController());
 
   @override
   Widget build(BuildContext context) {
