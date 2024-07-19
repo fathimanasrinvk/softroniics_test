@@ -15,7 +15,6 @@ class PlantGrid extends StatelessWidget {
     required this.plantNames,
     required this.plantDescriptions,
   });
-
   @override
   Widget build(BuildContext context) {
     return Padding(

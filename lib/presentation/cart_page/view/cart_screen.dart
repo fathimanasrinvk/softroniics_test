@@ -10,24 +10,28 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorTheme.secondarycolor,
-      appBar: AppBar(
-        title: Text('Cart'),
-      ),
-      body: Obx(() => ListView.builder(
-        itemCount: cartController.cartItems.length,
-        itemBuilder: (context, index) {
-          var item = cartController.cartItems[index];
-          return ListTile(
-            title: Text(item['name']), // Display plant name
-            leading: Image.asset(item['image']), // Display plant image
-            // trailing: IconButton(
-            //   icon: Icon(Icons.remove_circle),
-            //   onPressed: () {
-            //     cartController.removeFromCart(index);
-            //   },
-            // ),
-          );
-        },
+
+      body: Obx(() => Padding(
+        padding: const EdgeInsets.all(40),
+        child: ListView.builder(
+          itemCount: cartController.cartItems.length,
+          itemBuilder: (context, index) {
+            var item = cartController.cartItems[index];
+            return ListTile(
+              tileColor: ColorTheme.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              title: Text(item['name'],style: TextStyle(fontWeight: FontWeight.bold),),
+              leading: Image.asset(item['image']),
+              trailing: IconButton(
+                icon: Icon(Icons.delete,color: ColorTheme.maincolor,),
+                onPressed: () {
+                  cartController.removeFromCart(index);
+                },
+              ),
+            );
+          },
+        ),
       )),
     );
   }

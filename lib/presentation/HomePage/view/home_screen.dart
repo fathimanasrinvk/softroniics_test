@@ -41,15 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 350,top: 50),
-            child: InkWell(
-                onTap: (){
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => CartPage()));
-                },
-                child: Icon(Icons.shopping_cart,color: ColorTheme.green,)),
+            padding: const EdgeInsets.all(20),
+            child: Image.asset("assets/images/icon_img.png", height: 120),
           ),
-          Image.asset("assets/images/icon_img.png", height: 120),
           PlantGrid(
             plants: plants,
             plantNames: plantNames,

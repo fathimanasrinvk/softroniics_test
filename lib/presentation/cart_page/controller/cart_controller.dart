@@ -6,4 +6,8 @@ class CartController extends GetxController {
   void addToCart(String plantName, String plantImage) {
     cartItems.add({'name': plantName, 'image': plantImage});
   }
+
+  void removeFromCart(int index) {
+    cartItems.removeAt(index);
+  }
 }
