@@ -99,32 +99,28 @@ class _AddPlantScreenState extends State<AddPlantScreen> {
                           Padding(
                             padding: EdgeInsets.only(
                                 left: size * 35, right: size * 35, top: size * 30),
-                            child: Container(
-                              color: ColorTheme.secondarycolor,
-                              height: 150,
-                              child: TextFormField(
-                                maxLines: 10,
-                                controller: desController,
-                                textInputAction: TextInputAction.next,
-                                validator: (name) {
-                                  if (name!.isEmpty) {
-                                    return "Field is required";
-                                  } else {
-                                    return null;
-                                  }
-                                },
-                                style: TextStyle(color: ColorTheme.maincolor),
-                                decoration: InputDecoration(
-                                  filled: true,
-                                  fillColor: ColorTheme.secondarycolor,
-                                  hintText: 'About',
-                                  contentPadding:
-                                  EdgeInsets.symmetric(horizontal: size * 20),
-                                  border: OutlineInputBorder(
-                                      borderRadius:
-                                      BorderRadius.circular(size * 7),
-                                      borderSide: BorderSide.none),
-                                ),
+                            child: TextFormField(
+                              maxLines:2,
+                              controller: desController,
+                              textInputAction: TextInputAction.next,
+                              validator: (name) {
+                                if (name!.isEmpty) {
+                                  return "Field is required";
+                                } else {
+                                  return null;
+                                }
+                              },
+                              style: TextStyle(color: ColorTheme.maincolor),
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: ColorTheme.secondarycolor,
+                                hintText: 'About',
+                                contentPadding:
+                                EdgeInsets.symmetric(horizontal: size * 20),
+                                border: OutlineInputBorder(
+                                    borderRadius:
+                                    BorderRadius.circular(size * 7),
+                                    borderSide: BorderSide.none),
                               ),
                             ),
                           ),

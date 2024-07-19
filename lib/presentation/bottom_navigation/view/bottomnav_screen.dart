@@ -24,24 +24,31 @@ class BottomNavPage extends StatelessWidget {
       }),
       bottomNavigationBar: Obx(() {
         return BottomNavigationBar(
+          selectedItemColor: ColorTheme.green,
+          unselectedItemColor: ColorTheme.white,
+          elevation: 0,
           backgroundColor: ColorTheme.secondarycolor,
           currentIndex: navigationController.selectedIndex.value,
           onTap: navigationController.onItemTapped,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.green),
+              backgroundColor: Color(0xffE7F9DA),
+              icon: Icon(Icons.home, ),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.add_rounded, color: Colors.green),
+              backgroundColor: Color(0xffE7F9DA),
+              icon: Icon(Icons.add_rounded),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart, color: Colors.green),
+              backgroundColor: Color(0xffE7F9DA),
+              icon: Icon(Icons.shopping_cart),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_2_outlined, color: Colors.green),
+              backgroundColor: Color(0xffE7F9DA),
+              icon: Icon(Icons.person_2_outlined),
               label: '',
             ),
           ],
