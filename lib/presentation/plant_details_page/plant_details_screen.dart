@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:softroniics_test/core/constants/colors.dart';
@@ -17,27 +18,41 @@ class PlantDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isAsset = !plantImage.startsWith('/'); // Check if image path is asset or file
+
     return Scaffold(
       backgroundColor: ColorTheme.secondarycolor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
+            isAsset
+                ? Image.asset(
               plantImage,
               height: 350,
+              fit: BoxFit.cover,
+            )
+                : Image.file(
+              File(plantImage),
+              height: 350,
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 3),
+            SizedBox(height: 20),
             Text(
               plantName,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: ColorTheme.black,
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: Text(
                 plantDescription,
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 18,
+                  color: ColorTheme.black,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -48,7 +63,8 @@ class PlantDetailPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: ColorTheme.white,
                       backgroundColor: ColorTheme.maincolor,
@@ -60,7 +76,7 @@ class PlantDetailPage extends StatelessWidget {
                         fontSize: 18,
                       ),
                     ),
-                    child: Text("             Buy             "),
+                    child: Text("            Buy            "),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -68,7 +84,8 @@ class PlantDetailPage extends StatelessWidget {
                       Get.snackbar(
                         'Added to Cart',
                         '$plantName added to your cart',
-                        colorText: ColorTheme.green,
+                        colorText: ColorTheme.white,
+                        backgroundColor: ColorTheme.green,
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -82,7 +99,7 @@ class PlantDetailPage extends StatelessWidget {
                         fontSize: 18,
                       ),
                     ),
-                    child: Text("             Cart             "),
+                    child: Text("            Cart            "),
                   ),
                 ],
               ),

@@ -1,8 +1,8 @@
-// lib/presentation/addplantpage/addplantscreen.dart
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:get/get.dart';
+import 'package:softroniics_test/presentation/HomePage/view/home_screen.dart';
 import '../../core/constants/colors.dart';
 import '../../core/constants/text_style.dart';
 import '../../repository/model/plant_model.dart';
@@ -173,7 +173,7 @@ class _AddPlantScreenState extends State<AddPlantScreen> {
                                     imagePath: _image?.path ?? 'assets/images/default_plant.png',
                                   );
                                   plantController.addPlant(newPlant);
-                                  Get.back(); // Navigate back to the previous screen
+                                  Get.off(HomeScreen());
                                 }
                               },
                               style: ElevatedButton.styleFrom(

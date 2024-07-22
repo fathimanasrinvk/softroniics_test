@@ -1,4 +1,3 @@
-// lib/presentation/HomePage/view/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../core/constants/colors.dart';
@@ -29,6 +28,7 @@ class HomeScreen extends StatelessWidget {
                 plants: plantController.plants.map((plant) => plant.imagePath).toList(),
                 plantNames: plantController.plants.map((plant) => plant.name).toList(),
                 plantDescriptions: plantController.plants.map((plant) => plant.description).toList(),
+                plantController: plantController, // Pass the controller here
               );
             }),
           ],
